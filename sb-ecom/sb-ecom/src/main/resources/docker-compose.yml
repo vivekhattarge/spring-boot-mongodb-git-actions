@@ -1,0 +1,14 @@
+version: "5"
+services:
+  mongodbcontainer:
+    image: mongo:latest
+    container_name: "mongodbcontainer"
+    ports:
+      - 27017:27017
+  springboot-mongodb:
+    image: myntra-mongo-container
+    container_name: "springboot-mongodb"
+    ports:
+      - 8080:8080
+    links:
+      - mongodbcontainer
