@@ -2,13 +2,13 @@
 FROM openjdk:21
 
 # working directory in container
-WORKDIR /app
+#WORKDIR /app
 
 #copy jar file to container
-COPY ./build/libs/sb-ecom-0.0.1-SNAPSHOT.jar /app
+COPY ./build/libs/sb-ecom-0.0.1-SNAPSHOT.jar sb-ecom-0.0.1-SNAPSHOT.jar
 
 # port on which app will run
-#EXPOSE 9191
+EXPOSE 8080
 
 #command to run application
-CMD ["java","-jar","sb-ecom-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","/sb-ecom-0.0.1-SNAPSHOT.jar"]
