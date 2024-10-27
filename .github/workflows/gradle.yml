@@ -51,13 +51,15 @@ jobs:
     - name: Build with Gradle 8.9
       run: gradle build
       working-directory: ./sb-ecom/sb-ecom
+    - name: Build Docker image
+      run: docker build -t myntra-app -f ./sb-ecom/sb-ecom/Dockerfile ./sb-ecom/sb-ecom
     - name: build and push docker image
-      uses: docker/build-push-action@v6
+      uses: mr-smithers-excellent/docker-build-push@v5
       with:
           image: vivekprajakta/myntra-app
           tags: latest
           registry: docker.io
-          dockerfile: Dockerfile
+          dockerfile: ./sb-ecom/sb-ecom/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
