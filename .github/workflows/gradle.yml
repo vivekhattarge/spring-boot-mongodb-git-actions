@@ -52,7 +52,7 @@ jobs:
       run: gradle build
       working-directory: ./sb-ecom/sb-ecom
     - name: build and push docker image
-      uses: mr-smithers-excellent/docker-build-push@v5
+      uses: docker/build-push-action@v6
       with:
           image: vivekprajakta/myntra-app
           tags: latest
