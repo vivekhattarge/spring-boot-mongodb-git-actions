@@ -17,7 +17,7 @@ public class CategoryController {
 
     @GetMapping("/hello")
     public String getHello(){
-        return "docker commands";
+        return "First Docker push success";
     }
 
     @GetMapping

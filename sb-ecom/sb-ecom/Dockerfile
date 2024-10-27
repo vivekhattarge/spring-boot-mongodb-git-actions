@@ -11,4 +11,4 @@ COPY ./sb-ecom/sb-ecom/build/libs/sb-ecom-0.0.1-SNAPSHOT.jar sb-ecom-0.0.1-SNAPS
 EXPOSE 8080
 
 #command to run application
-CMD ["java","-jar","/sb-ecom-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/sb-ecom-0.0.1-SNAPSHOT.jar"]
