@@ -55,8 +55,8 @@ jobs:
 #      run: docker build -t myntra-app -f ./sb-ecom/sb-ecom/Dockerfile ./sb-ecom/sb-ecom
     - name: print jar files
       run: | 
+        cd ./sb-ecom/sb-ecom/build/libs/
         ls
-        ./sb-ecom/sb-ecom/build/libs/
     - name: build and push docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
