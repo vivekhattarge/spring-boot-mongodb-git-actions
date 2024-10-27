@@ -5,7 +5,7 @@ FROM openjdk:21
 #WORKDIR /app
 
 #copy jar file to container
-COPY ./build/libs/sb-ecom-0.0.1-SNAPSHOT.jar sb-ecom-0.0.1-SNAPSHOT.jar
+COPY ./sb-ecom/sb-ecom/build/libs/sb-ecom-0.0.1-SNAPSHOT.jar sb-ecom-0.0.1-SNAPSHOT.jar
 
 # port on which app will run
 EXPOSE 8080

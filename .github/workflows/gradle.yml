@@ -56,7 +56,7 @@ jobs:
     - name: print jar files
       run: | 
         ls
-        ./build/libs/
+        ./sb-ecom/sb-ecom/build/libs/
     - name: build and push docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
