@@ -53,6 +53,10 @@ jobs:
       working-directory: ./sb-ecom/sb-ecom
 #    - name: Build Docker image
 #      run: docker build -t myntra-app -f ./sb-ecom/sb-ecom/Dockerfile ./sb-ecom/sb-ecom
+    - name: print jar files
+      run: | 
+        ls
+        ./build/libs/
     - name: build and push docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
