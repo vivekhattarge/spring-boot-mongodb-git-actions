@@ -34,10 +34,10 @@ jobs:
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Grant execute permission for Gradle wrapper
-      run: chmod +x ./sb-ecom/sb-ecom/gradle/wrapper
+      run: chmod +x ./sb-ecom/sb-ecom/gradlew
 
     - name: Build with Gradle Wrapper
-      run: ./sb-ecom/sb-ecom/gradle/gradlew build
+      run: ./sb-ecom/sb-ecom/gradlew build
       working-directory: ./sb-ecom/sb-ecom
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
